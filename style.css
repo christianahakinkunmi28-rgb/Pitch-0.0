@@ -11,9 +11,10 @@ body {
     width: 100%;
     height: 7vh;
     padding: 0;
-    top:0;
-    z-index: 1020;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -36,15 +37,23 @@ body {
     cursor: pointer;
 }
 #navbar {
-  width: 100%;
-  position: sticky;
-  top: 40px ;
-  z-index: 1000;
-  /* background-color: #280F62; */
-  box-sizing: border-box;
-  padding: 20px 20px;
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 7vh;
+    left: 0;
+
+    z-index: 99999;
+
+    box-sizing: border-box;
+    padding: 10px;
+    height: 13vh;
+
+
+    background-color: transparent;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .navbar-container {
@@ -59,7 +68,7 @@ body {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 .logo_div {
   display: flex;
@@ -327,13 +336,12 @@ body {
   background-color: #C6A5FF;
 }
 
-
 /* Hero Section */
 .hero {
   position: relative;
-  top: -95px;
   min-height: 100vh;
   overflow: hidden;
+  z-index: 2;
 
   padding-top: 120px;
   padding-bottom: 50px;
@@ -709,13 +717,505 @@ body {
   margin-right: 8px;
 }
 
-.section-two {
-  min-height: 100vh;
 
+
+/* 
+   WHY PITCH
+*/
+
+.why-pitch {
   background: white;
+  color: #10051f;
 
-  padding: 120px 8%;
+  position: relative;
+  z-index: 1;
 
-  text-align: center;
-  margin-top: -96px;
+  
+  padding: 120px 2% 0;
+  padding-right: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* INTRO */
+
+.why-intro {
+  max-width: 850px;
+  padding-bottom: 40px;
+}
+
+.why-label {
+  margin: 0 0 15px;
+
+  color: #5b16e8;
+
+  font-family: monospace;
+
+  font-size: 20px;
+}
+
+.why-intro h2 {
+  margin: 0;
+
+  font-size: clamp(40px, 3vw, 95px);
+
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+.why-description {
+  max-width: 760px;
+
+  margin-top: 10px;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #444;
+}
+
+/* =========================
+   SCROLLING WHY SECTION
+========================= */
+
+.why-scroll {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 130px;
+
+  align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+/* .why-left {
+
+} */
+
+.why-item {
+  min-height: 45vh;
+
+
+  padding-bottom: 400px;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+.ass {
+  padding-bottom: 600px;
+}
+
+/* .why-item.active {
+  opacity: 1;
+} */
+.why-icon {
+  width: 2vw;
+  padding-right: 15px;
+}
+
+
+.why-item h3 {
+  margin: 0;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #5b16e8;
+}
+
+.why-item p {
+  max-width: 450px;
+
+  margin-top: 25px;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+
+  color: #5a5959;
+}
+
+/* RIGHT SIDE */
+
+.why-right {
+    position: sticky;
+    top: 200px;
+
+    height: 700px;
+
+    align-self: start;
+}
+
+
+.why-visual {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+} 
+
+
+/* Every scene occupies the exact same area */
+
+.why-scene {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+    background: #C6A5FF;
+    width: 95%;
+
+    height: 70%;
+    border-radius: 30px;
+    visibility: visible;
+  
+}
+
+
+.why-scene.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+.scene-main {
+    position: relative;
+
+    z-index: 1;
+    width: 80%;
+    height: 70%;
+    
+    left: 10%;
+
+    top: 13%;
+
+    border-radius: 20px;
+
+}
+.scene-card {
+    position: absolute;
+
+    z-index: 3;
+
+    border-radius: 15px;
+}
+.scene-style {
+    width: 25%;
+
+    left: 40%;
+
+    bottom: 10%;
+    
+     position: absolute;
+     z-index: 2;
+    
+}
+
+.scene-plus {
+    width: 28%;
+    right: 5%;
+
+    bottom: 5%;
+
+    
+
+    position: absolute;
+    z-index: 2;
+
+}
+
+.scene-stats {
+    width: 20%;
+
+    left: 10%;
+
+    bottom: 5px;
+    position: absolute;
+
+    z-index: 4;
+}
+
+.scene-icon {
+    width: 12%;
+
+    right: 5%;
+
+    top: 9px;
+    position: absolute;
+
+    z-index: 5;
+}
+.scene-brand {
+    width: 25%;
+    right: 4%;
+    bottom: 5%;
+}
+
+.scene-floating {
+    z-index: 6;
+    position: absolute;
+}
+.scene-frank {
+    width: 16%;
+    left: 22%;
+    top: 3%;
+    position: absolute;
+}
+.scene-emily {
+    width: 18%;
+    right: 18%;
+    bottom: 10%;
+    position: absolute;
+
+  }.scene-comments {
+    width: 18%;
+    right: 6%;
+    bottom: 41%;
+}
+/* =================================
+   THE PAYOFF
+================================= */
+
+.payoff {
+    min-height: 120vh;
+
+    position: relative;
+
+    background: white;
+
+    color: #10051f;
+
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+
+    padding: 70px 30px 100px;
+
+    box-sizing: border-box;
+}
+
+
+/* ===============================
+   LEFT LABEL
+================================ */
+
+.payoff-label {
+    font-family: monospace;
+
+    font-size: 19px;
+
+    color: #5b16e8;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ===============================
+   RIGHT SIDE
+================================ */
+
+.payoff-main {
+    width: 100%;
+
+    padding-right: 20px;
+    padding-left: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* ===============================
+   BIG HEADING
+================================ */
+
+
+
+.payoff-heading {
+    width: 100%;
+    margin: 0 auto;
+
+
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.08;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #5b16e8;
+}
+
+.payoff-heading span {
+    display: inline-block;
+
+    opacity: 0.15;
+    filter: blur(10px);
+
+    animation-name: payoffReveal;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    animation-timeline: view();
+}
+
+
+@keyframes payoffReveal {
+
+    0% {
+        opacity: 0.15;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+}
+
+.payoff-heading span:nth-child(1) {
+    animation-range: 0% 15%;
+}
+
+.payoff-heading span:nth-child(2) {
+    animation-range: 3% 18%;
+}
+
+.payoff-heading span:nth-child(3) {
+    animation-range: 6% 21%;
+}
+
+.payoff-heading span:nth-child(4) {
+    animation-range: 9% 24%;
+}
+
+.payoff-heading span:nth-child(5) {
+    animation-range: 12% 27%;
+}
+
+.payoff-heading span:nth-child(6) {
+    animation-range: 15% 30%;
+}
+
+.payoff-heading span:nth-child(7) {
+    animation-range: 18% 33%;
+}
+
+.payoff-heading span:nth-child(8) {
+    animation-range: 21% 36%;
+}
+
+.payoff-heading span:nth-child(9) {
+    animation-range: 24% 39%;
+}
+
+.payoff-heading span:nth-child(10) {
+    animation-range: 27% 42%;
+}
+
+.payoff-heading span:nth-child(11) {
+    animation-range: 30% 45%;
+}
+
+.payoff-heading span:nth-child(12) {
+    animation-range: 33% 48%;
+}
+
+.payoff-heading span:nth-child(13) {
+    animation-range: 36% 51%;
+}
+
+.payoff-heading span:nth-child(14) {
+    animation-range: 39% 54%;
+}
+
+.payoff-heading span:nth-child(15) {
+    animation-range: 42% 57%;
+}
+
+.payoff-heading span:nth-child(16) {
+    animation-range: 45% 60%;
+}
+
+.payoff-heading span:nth-child(17) {
+    animation-range: 48% 63%;
+}
+
+.payoff-heading span:nth-child(18) {
+    animation-range: 51% 66%;
+}
+
+.payoff-heading span:nth-child(19) {
+    animation-range: 54% 69%;
+}
+
+.payoff-heading span:nth-child(20) {
+    animation-range: 57% 72%;
+}
+
+.payoff-heading span:nth-child(21) {
+    animation-range: 60% 75%;
+}
+
+/* ===============================
+   STATISTICS
+================================ */
+
+.payoff-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 70px;
+
+    margin-top: 100px;
+}
+
+
+.payoff-stat h3 {
+    margin: 0;
+
+    color: #5b16e8;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    line-height: 0.7;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+
+.payoff-stat p {
+    margin-top: 25px;
+
+    max-width: 280px;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+
+    color: #48434d;
 }
