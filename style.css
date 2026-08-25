@@ -7654,3 +7654,478 @@ body {
         flex: 0 0 70vw;
     }
 }
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+   601px - 1024px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* =========================================
+       GLOBAL WIDTH FIX
+       ========================================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+
+    /* =========================================
+       NAVBAR
+       ========================================= */
+
+    .navbar_0,
+    #navbar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navbar-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* =========================================
+       HERO
+       ========================================= */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1 {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: clamp(55px, 8vw, 80px);
+        line-height: .9;
+    }
+
+    .prompt-wrapper {
+        width: min(90%, 750px);
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .prompt-box {
+        width: 100%;
+    }
+
+
+    /* =========================================
+       TRUSTED LOGOS
+       ========================================= */
+
+    .trusted-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .trusted-logos {
+        width: 100%;
+        max-width: 900px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px 45px;
+    }
+
+
+    /* =========================================
+       WHY PITCH
+       ========================================= */
+
+    .why-pitch {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .why-scroll {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .why-right,
+    .why-left {
+        min-width: 0;
+    }
+
+
+    /* =========================================
+       PAYOFF
+       ========================================= */
+
+    .payoff {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        box-sizing: border-box;
+    }
+
+    .payoff-main {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .payoff-stats {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .payoff-stat {
+        min-width: 0;
+    }
+
+    .payoff-stat h3 {
+        font-size: clamp(40px, 6vw, 65px);
+    }
+
+    .payoff-stat p {
+        font-size: 15px;
+        max-width: 240px;
+    }
+
+
+    /* =========================================
+       HOW TO
+       ========================================= */
+
+    .how-to {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .how-to-header {
+        width: calc(100% - 80px);
+        max-width: 850px;
+        margin-left: 40px;
+    }
+
+    .how-to-header h2 {
+        font-size: clamp(40px, 5vw, 55px);
+    }
+
+    .how-to-header p {
+        max-width: 700px;
+        font-size: 17px;
+    }
+
+    .cards-viewport {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .how-to-cards {
+        width: max-content;
+        padding-left: 40px;
+        padding-right: 100px;
+        gap: 35px;
+    }
+
+    .how-card {
+        width: 65vw;
+        max-width: 650px;
+    }
+
+
+    /* =========================================
+       SOLUTIONS
+       ========================================= */
+
+    .solutions {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        overflow: hidden;
+    }
+
+    .solutions-header h2 {
+        font-size: clamp(38px, 5vw, 50px);
+    }
+
+    .solutions-content {
+        width: 100%;
+        max-width: 900px;
+
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .solutions-image {
+        width: 100%;
+        height: 320px;
+    }
+
+    .sales-content {
+        min-width: 0;
+    }
+
+
+    /* =========================================
+       TOOLKIT
+       ========================================= */
+
+    .toolkit-section {
+        width: 100%;
+        max-width: 100%;
+        padding: 80px 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .toolkit-header {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .toolkit-header h2 {
+        font-size: clamp(35px, 5vw, 48px);
+    }
+
+    .toolkit-grid {
+        width: 100%;
+        max-width: 900px;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        gap: 14px;
+    }
+
+    .tool-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 280px;
+    }
+
+    /* Remove desktop positioning */
+    .ai-card,
+    .editor-card,
+    .analytics-card {
+        grid-column: auto;
+    }
+
+    .ai-card img,
+    .editor-card img,
+    .analytics-card img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================================
+       INTEGRATION
+       ========================================= */
+
+    .integration-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .integration-title {
+        font-size: clamp(38px, 5vw, 52px);
+    }
+
+    .integration-area {
+        width: 100%;
+        max-width: 850px;
+        height: 260px;
+    }
+
+    .integration-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    /* =========================================
+       FAQ
+       ========================================= */
+
+    .faq-container {
+        width: 90%;
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .faq-question {
+        padding-left: 30px;
+        padding-right: 60px;
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    .footer {
+        width: 90%;
+        max-width: 950px;
+    }
+
+}
+/* =========================================================
+   SMALL LAPTOP
+   1025px - 1200px
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar-container {
+        width: 95%;
+        max-width: 1150px;
+    }
+
+    .navbar-left {
+        gap: 25px;
+    }
+
+    .logo_div {
+        margin-right: 30px;
+    }
+
+    .navbar-links {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    .navbar-right {
+        gap: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .prompt-wrapper {
+        max-width: 750px;
+    }
+
+
+    /* HOW TO */
+
+    .how-to-header {
+        width: 90%;
+        max-width: 950px;
+    }
+
+    .how-to-cards {
+        gap: 40px;
+    }
+
+    .how-card {
+        width: 65vw;
+        max-width: 750px;
+    }
+
+
+    /* TOOLKIT */
+
+    .toolkit-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .toolkit-grid {
+        width: 95%;
+        max-width: 1100px;
+    }
+
+
+    /* SOLUTIONS */
+
+    .solutions {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .solutions-content {
+        max-width: 1000px;
+        gap: 50px;
+    }
+
+
+    /* PAYOFF */
+
+    .payoff {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
