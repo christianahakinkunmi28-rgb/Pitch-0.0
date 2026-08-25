@@ -69,3 +69,17 @@ const whyObserver = new IntersectionObserver(
 whyItems.forEach((item) => {
     whyObserver.observe(item);
 }); 
+
+const dragCursor = document.getElementById("dragCursor");
+const cards = document.querySelectorAll(".how-card");
+
+
+document.addEventListener("mousemove", (e) => {
+
+    dragCursor.style.left = e.clientX + "px";
+    dragCursor.style.top = e.clientY + "px";
+
+});
+
+
+
