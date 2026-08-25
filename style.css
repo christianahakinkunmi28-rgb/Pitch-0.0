@@ -1497,6 +1497,7 @@ body {
     line-height: 1.5;
     color: rgb(76, 76, 76);
 }
+
 .testimonials {
     width: 100%;
     overflow: hidden;
@@ -3068,7 +3069,7 @@ body {
 
     max-width: 90%;
 
-    font-size: 28px;
+    font-size: 18px;
 
     line-height: 1.55;
 
@@ -3101,7 +3102,7 @@ body {
 
     text-decoration: none;
 
-    font-size: 22px;
+    font-size: 16px;
 
     font-weight: 700;
 
