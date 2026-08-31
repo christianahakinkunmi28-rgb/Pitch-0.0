@@ -1202,7 +1202,6 @@ section {
 }
 
 
-
 .payoff-stats {
     display: grid;
 
@@ -1552,10 +1551,10 @@ section {
 .testimonial-card {
     position: relative;
 
-    width: 20vw;
-    flex: 0 0 20vw;
+    width: 26vw;
+    flex: 0 0 26vw;
 
-    height: 57vh;
+    height: 70vh;
 
     border-radius: 28px;
     overflow: hidden;
@@ -2436,7 +2435,7 @@ section {
 }
 
 
-.api-notice strong {
+.stro {
     font-weight: 700;
 }
 
@@ -2452,6 +2451,20 @@ section {
 
 .api-notice a:hover {
     flex-direction: row-reverse;
+}
+.api-notice a:hover strong {
+    color: #947bc7;
+}
+
+
+.api-notice a:hover img {
+    filter:
+        invert(24%)
+        sepia(61%)
+        saturate(5000%)
+        hue-rotate(255deg)
+        brightness(90%)
+        contrast(100%);
 }
 
 
@@ -4843,7 +4856,7 @@ img, video, iframe {
         min-height: auto;
         display: block;
         padding: 65px 16px 80px;
-        overflow: hidden;
+
     }
 
     .payoff-label {

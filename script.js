@@ -81,5 +81,41 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
+const footer = document.querySelector('.footer');
+const footerCta = document.querySelector('.footer-cta');
 
+function updateFooter() {
 
+    const rect = footer.getBoundingClientRect();
+
+    /*
+        When the footer reaches this point,
+        the purple section starts shrinking.
+    */
+    const start = window.innerHeight * 0.85;
+
+    /*
+        When it reaches this point,
+        the purple section has reached its
+        normal 33% width.
+    */
+    const end = window.innerHeight * 0.25;
+
+    let progress = (start - rect.top) / (start - end);
+
+    // Keep progress between 0 and 1
+    progress = Math.max(0, Math.min(1, progress));
+
+    /*
+        95% → 33%
+    */
+    const width = 95 - (62 * progress);
+
+    footerCta.style.width = width + '%';
+}
+
+window.addEventListener('scroll', updateFooter);
+
+window.addEventListener('resize', updateFooter);
+
+updateFooter();
